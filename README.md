@@ -1,5 +1,5 @@
-# week02_lab_HuynhMinhThu_20010211
-# Bài tập thực hành tuần 02
+# week04_lab_HuynhMinhThu_20010211
+# Bài tập thực hành tuần 04
 - Huỳnh Minh Thủ
 - Mssv: 20010211
 <hr>
