@@ -4,25 +4,24 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.List;
 
 @Entity
-@Table(name = "student")
+@Table(name = "class")
 @Setter
 @Getter
 @NoArgsConstructor
-public class Student {
+public class Clazz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "class_id")
+    private Long id;
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "class_id")
-    private Clazz clazz;
-
-    public Student(long id, String name) {
+    @OneToMany(mappedBy = "clazz")
+    private List<Student> studentList;
+    public Clazz(Long id, String name) {
         this.id = id;
         this.name = name;
     }
